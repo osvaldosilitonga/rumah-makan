@@ -28,15 +28,16 @@ Entitas :
 - Mencetak struk pembelian
 
 3. Waiters
-- Meng-input pesanan pelanggan
+- Membuat, merubah atau membatalkan pesanan pelanggan
+- Mengambil pesanan ketika mendapat notifikasi dari kitchen atau barista dan mengantarkan ke pelanggan
 - Konfirmasi jika pesanan sudah di antar
 
 4. Kitchen
-- Membuat pesanan
+- Menyiapkan pesanan
 - Konfirmasi pesanan setelah selesai dibuat
 
 5. Barista
-- Membuat pesanan
+- Menyiapkan pesanan
 - Konfirmasi pesanan setelah selesai dibuat
 
 ## Desain Arsitektur
@@ -46,7 +47,7 @@ Dalam perancangan sistem Rumah Makan ini, penulis menerapkan arsitektur monoliti
 ![system desing](./assets/system_design.png)
 
 2. Tech Stack
-- Nginx : Penulis menggunakan Nginx sebagai API Gateway sebagai entry point untuk masuk ke server backend. Nginx juga memiliki fitur Load Balancer, fitur ini bisa dimanfaatkan jika suatu saat dibuthkan horizontal scalling.
+- Nginx : Penulis menggunakan Nginx sebagai API Gateway sebagai entry point untuk masuk ke server backend. Nginx juga memiliki fitur Load Balancer, fitur ini bisa dimanfaatkan jika suatu saat dibutuhkan horizontal scalling.
 
 - Golang : Penulis menggunakan golang untuk bahasa pemrograman utama, dimana golang terbukti cepat dan ringan serta memiliki manajemen memory yang efisien dengan fitur garbage collection, ditambah fitur concurency yang dapat diterapkan dengan mudah menggunakan goroutine dan channel membuat aplikasi dapat mengerjakan banyak task secara concurent.
 
@@ -64,6 +65,8 @@ Dalam perancangan sistem Rumah Makan ini, penulis menerapkan arsitektur monoliti
 
 - Qoin Hub : Digunakan sebagai payment gateway untuk menerima berbagai macam metode pembayaran secara digital.
 
-## Desain Database
+## Entity Relationship Diagram (ERD)
 
-## API Specification
+![erd](./assets/erd.png)
+
+Untuk mengakses diagram lebih detail, dapat mengunjungi [link](https://dbdiagram.io/d/Rumah-Makan-PT-Qoin-Digital-651faf7affbf5169f027fd94) ini.
