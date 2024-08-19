@@ -42,6 +42,7 @@ Entitas :
 
 ## Desain Arsitektur
 1. Arsitektur Sistem
+<br />
 Dalam perancangan sistem Rumah Makan ini, penulis menerapkan arsitektur monolitik. Arsitektur monolitik cocok untuk aplikasi dengan skala kecil hingga menengah, sehingga lebih mudah untuk memulai dan mengembangkan aplikasi dengan tim yang relatif lebih kecil.
 
 ![system desing](./assets/system_design.png)
